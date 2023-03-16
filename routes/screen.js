@@ -20,7 +20,7 @@ router.get('/',(req,res,next)=>{
     })
 });
 router.post('/',(req,res,next)=>{
-    fs.writeFile('./message.txt',`${req.body.username}:${req.body.message}`,{flag:'a'},(err)=>{
+    fs.writeFile('message.txt',` ${req.body.username}:${req.body.message}`,{flag:'a'},(err)=>{
         err ? console.log(err) : res.redirect('/');
     });
 });
